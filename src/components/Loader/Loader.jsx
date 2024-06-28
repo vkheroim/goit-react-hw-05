@@ -1,18 +1,8 @@
-
-import css from "./Loader.module.css";
-import {InfinitySpin} from 'react-loader-spinner'
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const Loader = () => {
-    return (
-        <div className={css.loader}>
-        <InfinitySpin
-          visible={true}
-          width="200"
-          color="#026049"
-            ariaLabel="infinity-spin-loading"
-          />
-          </div>    
-    );
+  return <Skeleton count={30} />;
 };
 
 export default Loader;

@@ -1,5 +1,9 @@
-import css from "./ErrorMessage.module.css";
+import * as S from './ErrorMessage.style'
 
-export default function ErrorMessage() {
-  return <p className={css.text}>Oops... Something wrong.. Try again.</p>;
+const ErrorMessage = ({message = "Sorry, an error occurred, please try again later"}) => {
+  return (
+    <S.Message>{message}</S.Message>
+  )
 }
+
+export default ErrorMessage
